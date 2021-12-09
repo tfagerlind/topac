@@ -29,6 +29,7 @@ Prerequisites for running tests
 Warning! Running this command will change the state of your
 computer!!! If you don't want the very same configuration as me then
 it is not for you. This command will identify your home directory and
-configure its Emacs configuration.
+configure its Emacs and Git configuration. The Git user configured is
+my own. The behaviour could potentially be generalized in the future.
 
     make run
