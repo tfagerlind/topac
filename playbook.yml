@@ -1,0 +1,12 @@
+---
+- name: "Playing with Ansible"
+  vars:
+    local_home: "{{ lookup('env','HOME') }}"
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Configure Emacs
+      copy:
+        src: emacs
+        dest: '{{ local_home }}/.emacs'
+        mode: u=rw,g=rw,o=r
