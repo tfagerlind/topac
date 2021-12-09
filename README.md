@@ -33,3 +33,10 @@ configure its Emacs and Git configuration. The Git user configured is
 my own. The behaviour could potentially be generalized in the future.
 
     make run
+
+## Todo
+
+The user details for the Git configuration is unfortunate since they
+don't play well with public GitHub repositories. One idea is to manage
+the details in some kind of configuration file that is not version
+controlled.
