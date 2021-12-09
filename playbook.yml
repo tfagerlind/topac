@@ -7,6 +7,6 @@
   tasks:
     - name: Configure Emacs
       copy:
-        src: emacs
+        src: conf/emacs
         dest: '{{ local_home }}/.emacs'
         mode: u=rw,g=rw,o=r
