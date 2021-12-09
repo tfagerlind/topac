@@ -7,10 +7,10 @@ make-check:
 	docker run --rm -v $(CURDIR):/data cytopia/checkmake Makefile
 
 spell-check:
-	docker run --rm -ti -v $(CURDIR):/workdir tmaier/markdown-spellcheck:latest "**/*.md"
+	docker run --rm -v $(CURDIR):/workdir tmaier/markdown-spellcheck:latest "**/*.md"
 
 yaml-lint:
-	docker run --rm -it -v $(CURDIR):/data cytopia/yamllint .
+	docker run --rm -v $(CURDIR):/data cytopia/yamllint .
 
 ansible-lint:
 	docker run --rm -v $(CURDIR):/data cytopia/ansible-lint playbook.yml
