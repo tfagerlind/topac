@@ -7,7 +7,9 @@ make-check:
 	docker run --rm -v $(CURDIR):/data cytopia/checkmake Makefile
 
 spell-check:
-	docker run --rm -v $(CURDIR):/workdir tmaier/markdown-spellcheck:latest -r "**/*.md"
+	docker run --rm -v \
+		$(CURDIR):/workdir tmaier/markdown-spellcheck:latest \
+			--ignore-numbers -r "**/*.md"
 
 yaml-lint:
 	docker run --rm -v $(CURDIR):/data cytopia/yamllint .
