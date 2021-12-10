@@ -22,7 +22,7 @@ Prerequisites for running tests
 
 ## How to run all tests
 
-    make tests
+    make test
 
 ## How to run
 
