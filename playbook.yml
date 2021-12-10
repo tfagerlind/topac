@@ -11,7 +11,7 @@
         dest: '{{ local_home }}/.emacs'
         mode: u=rw,g=rw,o=r
     - name: Configure Git
-      copy:
-        src: conf/gitconfig
+      template:
+        src: conf/gitconfig.j2
         dest: '{{ local_home }}/.gitconfig'
         mode: u=rw,g=rw,o=r

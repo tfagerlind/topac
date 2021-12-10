@@ -1,6 +1,0 @@
-[user]
-    email = tomas.fagerlind@sofengi.com
-    name = Tomas Fägerlind
-
-[core]
-    editor = emacs -nw

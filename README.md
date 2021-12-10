@@ -29,14 +29,13 @@ Prerequisites for running tests
 Warning! Running this command will change the state of your
 computer!!! If you don't want the very same configuration as me then
 it is not for you. This command will identify your home directory and
-configure its Emacs and Git configuration. The Git user configured is
-my own. The behaviour could potentially be generalized in the future.
+configure its Emacs and Git configuration.
+
+First create an inventory named `inventory.yml` using the file
+`inventory.yml.templ` as template. Then run
 
     make run
 
 ## Todo
 
-The user details for the Git configuration is unfortunate since they
-don't play well with public GitHub repositories. One idea is to manage
-the details in some kind of configuration file that is not version
-controlled.
+Add support for YAML in Emacs configuration.

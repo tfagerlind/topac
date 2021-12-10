@@ -16,6 +16,6 @@ ansible-lint:
 	docker run --rm -v $(CURDIR):/data cytopia/ansible-lint playbook.yml
 
 run:
-	ANSIBLE_INVENTORY_UNPARSED_FAILED=TRUE ansible-playbook -i hosts playbook.yml
+	ANSIBLE_INVENTORY_UNPARSED_FAILED=TRUE ansible-playbook -i inventory.yml playbook.yml
 
 test: project-check make-check spell-check yaml-lint ansible-lint
