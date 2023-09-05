@@ -1,5 +1,5 @@
 ---
-- name: "Playing with Ansible"
+- name: "Setup configuration files"
   vars:
     local_home: "{{ lookup('env','HOME') }}"
   hosts: localhost
