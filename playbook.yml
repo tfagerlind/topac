@@ -15,3 +15,8 @@
         src: conf/gitconfig.j2
         dest: '{{ local_home }}/.gitconfig'
         mode: u=rw,g=rw,o=r
+    - name: Configure Vim
+      template:
+        src: conf/vimrc
+        dest: '{{ local_home }}/.vimrc'
+        mode: u=rw,g=rw,o=r
