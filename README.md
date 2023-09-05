@@ -31,8 +31,9 @@ computer!!! If you don't want the very same configuration as me then
 it is not for you. This command will identify your home directory and
 configure its Emacs and Git configuration.
 
-First create an inventory named `inventory.yml` using the file
-`inventory.yml.templ` as template. Then run
+First ensure that the configuration satisfies your needs. If you are not me
+you most certainly want to change the name and email address in `inventory.yml`,
+for example. Then run
 
     make run
 
