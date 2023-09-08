@@ -4,6 +4,12 @@
   hosts: localhost
   connection: local
   tasks:
+    - name: Install miscellaneous
+      package:
+        name:
+          - git
+        state: present
+      become: true
     - name: Configure Git
       template:
         src: conf/gitconfig.j2
