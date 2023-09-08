@@ -2,9 +2,16 @@
 - name: "Setup configuration files"
   vars:
     local_home: "{{ lookup('env','HOME') }}"
+    vim_dir: "{{ local_home }}/.vim"
   hosts: localhost
   connection: local
   tasks:
+    - name: Install vim
+      package:
+        name:
+          - vim
+        state: present
+      become: true
     - name: Configure Emacs
       copy:
         src: conf/emacs
@@ -20,3 +27,23 @@
         src: conf/vimrc
         dest: '{{ local_home }}/.vimrc'
         mode: u=rw,g=rw,o=r
+    - name: Ensure that vim directories exists
+      file:
+        path: "{{ item }}"
+        state: directory
+        recurse: false
+        mode: 0750
+      loop:
+        - "{{ vim_dir }}"
+        - "{{ vim_dir }}/autoload"
+    - name: Ensure vim-plug is in place
+      get_url:
+        dest: "{{ local_home }}/.vim/autoload/plug.vim"
+        url: "https://raw.githubusercontent.com\
+              /junegunn/vim-plug/master/plug.vim"
+    - name: Install vim plugins
+      # noqa: no-changed-when
+      #       Plugins are listed in the vim configuration.
+      #       It is hard to know whether they are all installed
+      #       or not.
+      ansible.builtin.command: vim -c "PlugInstall" -c "qall"
