@@ -41,4 +41,4 @@
       #       Plugins are listed in the vim configuration.
       #       It is hard to know whether they are all installed
       #       or not.
-      ansible.builtin.command: vim -c "PlugInstall" -c "qall"
+      command: vim -c "PlugInstall" -c "qall" --not-a-term
