@@ -32,7 +32,7 @@
         path: "{{ item }}"
         state: directory
         recurse: false
-        mode: 0750
+        mode: 0775
       loop:
         - "{{ vim_dir }}"
         - "{{ vim_dir }}/autoload"
