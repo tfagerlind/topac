@@ -12,11 +12,6 @@
           - vim
         state: present
       become: true
-    - name: Configure Emacs
-      copy:
-        src: conf/emacs
-        dest: '{{ local_home }}/.emacs'
-        mode: u=rw,g=rw,o=r
     - name: Configure Git
       template:
         src: conf/gitconfig.j2
