@@ -8,10 +8,17 @@
       package:
         name:
           - git
+          - i3
+          - arandr
         state: present
       become: true
     - name: Configure Git
       template:
         src: conf/gitconfig.j2
         dest: '{{ local_home }}/.gitconfig'
+        mode: u=rw,g=rw,o=r
+    - name: Configure I3
+      template:
+        src: conf/i3-config
+        dest: '{{ local_home }}/.config/i3/config'
         mode: u=rw,g=rw,o=r

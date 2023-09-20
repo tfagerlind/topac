@@ -8,6 +8,13 @@ among developers, but who knows?
 Topac stands for Top As Code, where Top is a
 generalization of Desktop and Laptop.
 
+Topac includes installation and configuration of
+
+* I3
+* Vim
+* Git
+* ARandR
+
 ## Prerequisites
 
 Prerequisites for running configurations:
@@ -36,7 +43,3 @@ you most certainly want to change the name and email address in `inventory.yml`,
 for example. Then run
 
     make run
-
-## Todo
-
-Add support for YAML in Emacs configuration.
