@@ -43,3 +43,38 @@ you most certainly want to change the name and email address in `inventory.yml`,
 for example. Then run
 
     make run
+
+## Manual steps to configure Kinesis Advantage Keyboard with Swedish characters
+
+This configurations are suitable for the use of the Kinesis Advantage Keyboard
+together with I3.
+
+### Reset previous configurations
+
+This step is just to avoid surprises. If you have important configurations that
+might go away with this action then you need to take other measures.
+
+`Progrm + Shift + F10`
+
+### Turning off the key click feature
+
+The key click feature is just annoying.
+
+`Progrm + star *`
+
+### Switch place between Windows key and delete key
+
+When in Non-Windows mode, then the Windows key is only reached by toggling the
+keypad key. It is good to place the delete key somewhere so that it can be
+remapped later on, if desired.
+
+1. `Progrm + Shift + F12`
+1. `Delete`
+1. `Keypad`
+1. `ScrollLock`
+1. `Keypad`
+1. `Keypad`
+1. `ScrollLock`
+1. `Keypad`
+1. `Delete`
+1. `Progrm + Shift + F12`
