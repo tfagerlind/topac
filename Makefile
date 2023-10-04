@@ -16,7 +16,7 @@ yaml-lint:
 
 ansible-lint:
 	docker run --rm -v $(CURDIR):/data cytopia/ansible-lint \
-		playbook.yml vim.yml
+		playbook.yml vim.yml bin.yml
 
 run:
 	ANSIBLE_INVENTORY_UNPARSED_FAILED=TRUE ansible-playbook \

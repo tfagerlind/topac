@@ -14,6 +14,7 @@ Topac includes installation and configuration of
 * Vim
 * Git
 * ARandR
+* Convenience scripts for displays
 
 ## Prerequisites
 

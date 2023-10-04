@@ -1,5 +1,6 @@
 ---
 - import_playbook: vim.yml
+- import_playbook: bin.yml
 - name: "Setup configuration files"
   hosts: localhost
   connection: local
