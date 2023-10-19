@@ -15,6 +15,7 @@
           - i3
           - arandr
           - zsh
+          - konsole
         state: present
       become: true
     - name: Configure Git
@@ -26,6 +27,11 @@
       template:
         src: conf/i3-config
         dest: '{{ local_home }}/.config/i3/config'
+        mode: u=rw,g=rw,o=r
+    - name: Configure Konsole
+      template:
+        src: conf/konsole.profile
+        dest: '{{ local_home }}/.local/share/konsole/best.profile'
         mode: u=rw,g=rw,o=r
     - name: Change user shell to zsh
       become: true

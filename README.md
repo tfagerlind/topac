@@ -16,6 +16,7 @@ Topac includes installation and configuration of
 * ARandR
 * Convenience scripts for displays
 * Zsh/Oh my Zsh
+* Konsole
 
 ## Prerequisites
 
