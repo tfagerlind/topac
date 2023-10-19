@@ -15,6 +15,7 @@ Topac includes installation and configuration of
 * Git
 * ARandR
 * Convenience scripts for displays
+* Zsh/Oh my Zsh
 
 ## Prerequisites
 

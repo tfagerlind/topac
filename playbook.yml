@@ -4,6 +4,9 @@
 - name: "Setup configuration files"
   hosts: localhost
   connection: local
+  become: false
+  vars:
+    the_user: "{{ ansible_user_id }}"
   tasks:
     - name: Install miscellaneous
       package:
@@ -11,6 +14,7 @@
           - git
           - i3
           - arandr
+          - zsh
         state: present
       become: true
     - name: Configure Git
@@ -23,3 +27,17 @@
         src: conf/i3-config
         dest: '{{ local_home }}/.config/i3/config'
         mode: u=rw,g=rw,o=r
+    - name: Change user shell to zsh
+      become: true
+      user:
+        name: "{{ the_user }}"
+        shell: /bin/zsh
+    - name: Task name
+      stat:
+        path: '{{ local_home }}/.oh-my-zsh'
+      register: oh_my_zsh_configuration
+    - name: Install Oh My Zsh
+      # Urls should be fine
+      # yamllint disable-line rule:line-length
+      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      when: not oh_my_zsh_configuration.stat.exists
