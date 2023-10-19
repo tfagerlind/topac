@@ -16,6 +16,7 @@
           - arandr
           - zsh
           - konsole
+          - tree
         state: present
       become: true
     - name: Configure Git

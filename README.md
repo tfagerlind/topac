@@ -17,6 +17,7 @@ Topac includes installation and configuration of
 * Convenience scripts for displays
 * Zsh/Oh my Zsh
 * Konsole
+* tree
 
 ## Prerequisites
 
