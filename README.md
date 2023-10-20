@@ -14,6 +14,7 @@ Topac includes installation and configuration of
 * Vim
 * Git
 * ARandR
+* Autorandr
 * Convenience scripts for displays
 * Zsh/Oh my Zsh
 * Konsole
@@ -30,6 +31,10 @@ Prerequisites for running tests
 
 * Make
 * Docker
+
+Remark: using another task runner than Make is not necessarily convenient, since
+Topac is normally used in a boot strapping context where few applications are
+available.
 
 ## How to run all tests
 

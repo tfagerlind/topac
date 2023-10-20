@@ -1,6 +1,5 @@
 ---
 - import_playbook: vim.yml
-- import_playbook: bin.yml
 - name: "Setup configuration files"
   hosts: localhost
   connection: local
@@ -14,11 +13,24 @@
           - git
           - i3
           - arandr
+          - autorandr
           - zsh
           - konsole
           - tree
         state: present
       become: true
+    - name: Check if Autorandr is already configured
+      stat:
+        path: '{{ local_home }}/.config/autorandr'
+      register: autorandr_configuration
+    - name: Configure autorandr
+      copy:
+        src: conf/autorandr
+        dest: '{{ local_home }}/.config/'
+        mode: u=rw,g=rw,o=r
+      when: not autorandr_configuration.stat.exists
+    - name: Activate autorandr configuration
+      command: autorandr --change
     - name: Configure Git
       template:
         src: conf/gitconfig.j2
@@ -39,7 +51,7 @@
       user:
         name: "{{ the_user }}"
         shell: /bin/zsh
-    - name: Task name
+    - name: Check if Zsh is already configured
       stat:
         path: '{{ local_home }}/.oh-my-zsh'
       register: oh_my_zsh_configuration
