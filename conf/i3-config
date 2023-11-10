@@ -185,4 +185,4 @@ bar {
 default_border pixel 5
 default_floating_border pixel 5
 
-exec xrandr --output eDP-1 --mode 1920x1080 --scale 1x1
+exec autorandr --change
