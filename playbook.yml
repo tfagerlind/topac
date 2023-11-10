@@ -28,7 +28,6 @@
         src: conf/autorandr
         dest: '{{ local_home }}/.config/'
         mode: u=rw,g=rw,o=r
-        when: not autorandr_configuration.stat.exists
     - name: Activate autorandr configuration
       command: autorandr --change
       when: not autorandr_configuration.stat.exists
