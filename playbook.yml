@@ -67,6 +67,12 @@
         state: directory
         recurse: false
         mode: 0775
+    - name: Ensure that konsole directory exist
+      file:
+        path: "{{ local_home }}/.local/share/konsole"
+        state: directory
+        recurse: false
+        mode: 0775
     - name: Configure Konsole
       template:
         src: conf/konsole.profile
