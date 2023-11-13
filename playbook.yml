@@ -36,11 +36,35 @@
         src: conf/gitconfig.j2
         dest: '{{ local_home }}/.gitconfig'
         mode: u=rw,g=rw,o=r
+    - name: Ensure that config directory exist
+      file:
+        path: "{{ local_home }}/.config"
+        state: directory
+        recurse: false
+        mode: 0775
+    - name: Ensure that I3 directory exist
+      file:
+        path: "{{ local_home }}/.config/i3"
+        state: directory
+        recurse: false
+        mode: 0775
     - name: Configure I3
       template:
         src: conf/i3-config
         dest: '{{ local_home }}/.config/i3/config'
         mode: u=rw,g=rw,o=r
+    - name: Ensure that dot-local directory exist
+      file:
+        path: "{{ local_home }}/.local"
+        state: directory
+        recurse: false
+        mode: 0775
+    - name: Ensure that share directory exist
+      file:
+        path: "{{ local_home }}/.local/share"
+        state: directory
+        recurse: false
+        mode: 0775
     - name: Configure Konsole
       template:
         src: conf/konsole.profile
