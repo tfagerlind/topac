@@ -30,6 +30,8 @@
         mode: u=rw,g=rw,o=r
     - name: Activate autorandr configuration
       command: autorandr --change
+      # allow autrandr to fail when no display is found
+      ignore_errors: true
       when: not autorandr_configuration.stat.exists
     - name: Configure Git
       template:
