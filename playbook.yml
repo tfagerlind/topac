@@ -17,6 +17,10 @@
           - zsh
           - konsole
           - tree
+          # apart from being a handy application, curl is also a dependency of
+          # the oh-my-zsh installation, and it is was not available as default
+          # on ubuntu jammy
+          - curl
         state: present
       become: true
     - name: Check if Autorandr is already configured
