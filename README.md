@@ -80,7 +80,14 @@ might go away with this action then you need to take other measures.
 
 The key click feature is just annoying.
 
-`Progrm + star *`
+`Progrm + hyphen` (the hyphen key is the plus key on swedish layout)
+
+### Remap Caps Lock to Escape
+
+1. `Progrm + F12`
+1. `Esc`
+1. `Caps Lock`
+1. `Progrm + F12`
 
 ### Switch place between Windows key and delete key
 
@@ -98,3 +105,7 @@ remapped later on, if desired.
 1. `Keypad`
 1. `Delete`
 1. `Progrm + Shift + F12`
+
+### Soft Reset
+
+`Progrm + Shift + F10`
