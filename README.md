@@ -80,7 +80,7 @@ might go away with this action then you need to take other measures.
 
 The key click feature is just annoying.
 
-`Progrm + hyphen` (the hyphen key is the plus key on swedish layout)
+`Progrm + hyphen` (the hyphen key is the plus key on Swedish layout)
 
 ### Remap Caps Lock to Escape
 

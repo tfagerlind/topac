@@ -1,5 +1,6 @@
 ---
-- import_playbook: vim.yml
+- name: Setup Vim
+  import_playbook: playbooks/vim.yml
 - name: "Setup configuration files"
   hosts: localhost
   connection: local

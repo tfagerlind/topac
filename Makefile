@@ -15,8 +15,8 @@ yaml-lint:
 	docker run --rm -v $(CURDIR):/data cytopia/yamllint:alpine-1 .
 
 ansible-lint:
-	docker run --rm -v $(CURDIR):/data cytopia/ansible-lint:alpine-5 \
-		playbook.yml vim.yml
+	docker run --rm -v $(CURDIR):/data cytopia/ansible-lint:alpine-6 \
+		--strict --profile moderate
 
 run:
 	ANSIBLE_INVENTORY_UNPARSED_FAILED=TRUE ansible-playbook \
